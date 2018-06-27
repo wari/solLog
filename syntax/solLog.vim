@@ -235,6 +235,7 @@ syn keyword	logEvent	VPN_BRIDGING_LINK_TTL_EXCEEDED
 syn keyword	logEvent	VPN_BRIDGING_LINK_TTL_EXCEEDED_CLEAR
 syn keyword	logEvent	VPN_BRIDGING_LINK_UP
 syn keyword	logEvent	VPN_BRIDGING_SUBSCRIPTION_ADD_FAILED
+syn keyword	logEvent	VPN_CLIENT_USERNAME
 syn keyword	logEvent	VPN_CLIENT_USERNAME_CONNECTIONS_EXCEEDED
 syn keyword	logEvent	VPN_CLIENT_USERNAME_CONNECTIONS_HIGH
 syn keyword	logEvent	VPN_CLIENT_USERNAME_CONNECTIONS_HIGH_CLEAR
@@ -248,6 +249,7 @@ syn keyword	logEvent	VPN_RDP_RDP_UP
 syn keyword	logEvent	VPN_REPLICATION_SERVICE_DEGRADED
 syn keyword	logEvent	VPN_REPLICATION_SERVICE_DEGRADED_CLEAR
 syn keyword	logEvent	VPN_SERVICE_LISTEN_PORT_STATE_CHANGE
+syn keyword	logEvent	VPN_SERVICE_SMF
 syn keyword	logEvent	VPN_SERVICE_SMF_STATE_CHANGE
 syn keyword	logEvent	VPN_SOLCACHE_BACKUP_COMPLETED
 syn keyword	logEvent	VPN_SOLCACHE_BACKUP_FAILED
@@ -370,7 +372,7 @@ syn match	logProto	'SHELL'
 " syn keyword	logSrc		logProto nextgroup=logWho skipwhite
 
 " filename
-syn match	logFilename	'\v<\h\w*\.\w+:\d+>'
+syn match	logFilename	'\v<\h[-a-zA-Z_]*\.\w+:\d+>'
 
 hi def link logDate		Number
 hi def link logTime		Number
